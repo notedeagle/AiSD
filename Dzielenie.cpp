@@ -19,11 +19,10 @@ double Dzielenie::dzielenie(double y, double z) {
         }
     } while(w > z);
 
-    cout << "Wynik z dzielenia: " << q << endl << "Reszta: " << r << endl << endl;
-
     return q, r;
 }
 
 void Dzielenie::run() {
     dzielenie(45, 6);
+    cout << "Wynik z dzielenia: " << q << endl << "Reszta: " << r << endl << endl;
 }

@@ -1,6 +1,6 @@
 #include "Horner.h"
 
-double Horner::horner1(double A[], int n, double x){
+double Horner::hornerSzybki(double A[], int n, double x){
     double v = 0;
     for(int i = n; i >= 0; i--){
         v = A[i] + v * x;
@@ -8,7 +8,7 @@ double Horner::horner1(double A[], int n, double x){
     return v;
 }
 
-double Horner::horner2(double A[], int n, double x){
+double Horner::hornerWolny(double A[], int n, double x){
     double p = A[0];
     double w;
 
@@ -57,35 +57,35 @@ void Horner::run() {
 
         if(wybor != 3){
             start1 = clock();
-            horner1(tab, ile, punkt);
+            hornerSzybki(tab, ile, punkt);
             stop1 = clock();
-            h1 = horner1(tab, ile, punkt);
+            h1 = hornerSzybki(tab, ile, punkt);
         }
 
         if(wybor != 2){
             start2 = clock();
-            horner2(tab, ile, punkt);
+            hornerWolny(tab, ile, punkt);
             stop2 = clock();
-            h2 = horner2(tab, ile, punkt);
+            h2 = hornerWolny(tab, ile, punkt);
         }
 
         cout << setprecision(20);
 
         if(wybor != 3){
-            cout << "\nWynik 1: " << h1 << endl;
+            cout << "\nWynik szybszy algorytm: " << h1 << endl;
             szyb1 = (double)(stop1 - start1) / (double)CLOCKS_PER_SEC;
-            cout << "Szybkosc 1: " << szyb1 << endl;
+            cout << "Czas pierwszy algorytm: " << szyb1 << endl;
         }
 
         if(wybor != 2){
-            cout << "\nWynik 2: " << h2 << endl;
+            cout << "\nWynik wolniejszy algorytm: " << h2 << endl;
             szyb2 = (double)(stop2 - start2) / (double)CLOCKS_PER_SEC;
-            cout << "Szybkosc 2: " << szyb2 << endl;
+            cout << "Czas wolniejszy algorytm: " << szyb2 << endl;
         }
 
         if(wybor == 1){
             cout << "\nRoznica w wyniku: " << h2 - h1 << endl;
-            cout << "Roznica w szybkosci: " << szyb2 - szyb1 << endl;
+            cout << "Roznica w czasie: " << szyb2 - szyb1 << endl;
         }
 
         delete[] tab;

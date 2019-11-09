@@ -10,8 +10,8 @@ using namespace std;
 
 class Horner {
 public:
-    double horner1(double A[], int n, double x);
-    double horner2(double A[], int n, double x);
+    double hornerSzybki(double A[], int n, double x);
+    double hornerWolny(double A[], int n, double x);
     void run();
 };
 
