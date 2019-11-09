@@ -1,6 +1,6 @@
 #include "Horner.h"
 
-double Horner::horner1(double A[], int n, double x){ //algorytm 6
+double Horner::horner1(double A[], int n, double x){
     double v = 0;
     for(int i = n; i >= 0; i--){
         v = A[i] + v * x;
@@ -35,7 +35,7 @@ void Horner::run() {
     double szyb1, szyb2;
     double* tab = NULL;
 
-    do{
+    do {
         double punkt = (double)rand() / (double)RAND_MAX;
         cout << setprecision(5);
         cout << "\nWylosowano punkt: " << punkt << endl;
@@ -53,11 +53,8 @@ void Horner::run() {
 
         for(int i = 0; i < ile; i++){
             tab[i] = (double)rand() / (double)RAND_MAX;
-            //cout << tab[i] << ", ";
-            //if(!(i % 10) && i)
-            //cout << endl;
         }
-        //cout << tab[ile - 1] << endl;
+
         if(wybor != 3){
             start1 = clock();
             horner1(tab, ile, punkt);
