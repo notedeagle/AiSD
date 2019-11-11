@@ -1,6 +1,8 @@
 #include "Dzielenie.h"
 
 double Dzielenie::dzielenie(double y, double z) {
+    cout << "y= " << y << endl << "z= " << z << endl;
+
     r = y;
     q = 0;
     w = z;
