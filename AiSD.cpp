@@ -1,5 +1,6 @@
 #include "Horner.h"
 #include "Dzielenie.h"
+#include "ParaElementow.h"
 
 void horner() {
     Horner horner;
@@ -11,6 +12,11 @@ void dzielenie() {
     dzielenie.run();
 }
 
+void paraElementow() {
+    ParaElementow paraElementow;
+    paraElementow.run();
+}
+
 int getInput() {
     int choice;
     cin >> choice;
@@ -18,11 +24,13 @@ int getInput() {
 }
 
 void displayMenu() {
+    cout << endl;
     cout << "Wybierz algorytm:" << endl;
     cout << "1. Horner" << endl;
     cout << "2. Dzielenie" << endl;
-    cout << "3. Wyjdz" << endl;
-    cout << "Wybor: " << endl;
+    cout << "3. Para Elementow" << endl;
+    cout << "9. Wyjdz" << endl;
+    cout << "Wybor: ";
 }
 
 int main() {
@@ -40,7 +48,7 @@ int main() {
                 dzielenie();
                 break;
             case 3:
-                return 0;
+                paraElementow();
             default:
                 break;
         }
