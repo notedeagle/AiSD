@@ -32,5 +32,6 @@ void Dzielenie::run() {
     cout << "Podaj z: " << endl;
     cin >> z;
     dzielenie(y, z);
-    cout << "Wynik z dzielenia: " << q << endl << "Reszta: " << r << endl << endl;
+    cout << "Wynik z dzielenia: " << q << endl << "Reszta: " << r << endl;
+    cout << "Liczba odejmowan: " << a << endl;
 }
