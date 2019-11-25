@@ -17,7 +17,7 @@ void ParaElementow::print_array(int* tabPtr) {
             cout << tabPtr[i] << " ";
         }
     } else {
-        cout << "Wyswietalnie tablicy wylaczone z powodu duzej wielkosci";
+        cout << "Wyswietlanie tablicy wylaczone z powodu duzej wielkosci";
     }
     cout << endl;
 }
@@ -119,7 +119,7 @@ void ParaElementow::run() {
     cout << "Wylosowana liczba to: " << n << endl;
 
     if (sprawdzanieElementow(tab, arr_size, n)) {
-        cout << "Tablica ma 2 elementy dajace: " << n << ". Pierwsza liczba to: " << a << " , a druga to: " << b << endl;
+        cout << "Tablica ma 2 elementy dajace: " << n << ". Pierwsza liczba to: " << a << " ,a druga to: " << b << endl;
     } else {
         cout << "Tablica nie ma 2 elementow dajacych " << n << endl;
     }
