@@ -121,7 +121,7 @@ void ParaElementow::run() {
     if (sprawdzanieElementow(tab, arr_size, n)) {
         cout << "Tablica ma 2 elementy dajace: " << n << ". Pierwsza liczba to: " << a << " , a druga to: " << b << endl;
     } else {
-        cout << "Tablica niema 2 elementow dajacych " << n << endl;
+        cout << "Tablica nie ma 2 elementow dajacych " << n << endl;
     }
 
 }
