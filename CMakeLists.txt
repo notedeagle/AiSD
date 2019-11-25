@@ -3,4 +3,4 @@ project(Horner)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(Horner AiSD.cpp Horner.cpp Horner.h Dzielenie.cpp Dzielenie.h ParaElementow.cpp ParaElementow.h)
+add_executable(Horner AiSD/AiSD.cpp AiSD/Horner.cpp AiSD/Horner.h AiSD/Dzielenie.cpp AiSD/Dzielenie.h AiSD/ParaElementow.cpp AiSD/ParaElementow.h)
