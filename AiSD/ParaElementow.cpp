@@ -76,11 +76,32 @@ void ParaElementow::merge_sort(int p, int r) {
     }
 }
 
+bool ParaElementow::sprawdzanieElementow(int A[], int arr_size, int sum) {
+
+    int l, r;
+
+    l = 0;
+    r = arr_size - 1;
+    while (l < r) {
+        if (A[l] + A[r] == sum) {
+            a = A[l];
+            b = A[r];
+            return 1;
+        } else if (A[l] + A[r] < sum) {
+            l++;
+        } else {
+            r--;
+         }
+    }
+    return 0;
+}
+
+
 void ParaElementow::run() {
     random_device rd;
     mt19937 generator(rd());
 
-    srand((unsigned int)time(nullptr));
+    srand(time(NULL));
     for (int i = 0; i < arr_size; i++)
     {
         tab[i] = rand() % 100 + 1;
@@ -92,4 +113,15 @@ void ParaElementow::run() {
     merge_sort(0, arr_size - 1);
     cout << endl << "Posortowana tablica: " << endl;
     print_array(tab);
+
+    n = rand() % 250 + 1;
+
+    cout << "Wylosowana liczba to: " << n << endl;
+
+    if (sprawdzanieElementow(tab, arr_size, n)) {
+        cout << "Tablica ma 2 elementy dajace: " << n << ". Pierwsza liczba to: " << a << " , a druga to: " << b << endl;
+    } else {
+        cout << "Tablica niema 2 elementow dajacych " << n << endl;
+    }
+
 }
