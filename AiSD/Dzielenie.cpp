@@ -1,7 +1,6 @@
 #include "Dzielenie.h"
 
 double Dzielenie::dzielenie(double y, double z) {
-    cout << "y: " << y << endl << "z: " << z << endl;
 
     r = y;
     q = 0;
@@ -27,10 +26,11 @@ double Dzielenie::dzielenie(double y, double z) {
 
 void Dzielenie::run() {
     int y, z;
-    cout << "Podaj y: " << endl;
+    cout << "Podaj y: ";
     cin >> y;
-    cout << "Podaj z: " << endl;
+    cout << "Podaj z: ";
     cin >> z;
+    cout << endl;
     dzielenie(y, z);
     cout << "Wynik z dzielenia: " << q << endl << "Reszta: " << r << endl;
     cout << "Liczba odejmowan: " << a << endl;
